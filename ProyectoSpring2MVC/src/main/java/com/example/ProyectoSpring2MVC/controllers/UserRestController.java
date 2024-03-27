@@ -1,6 +1,9 @@
 package com.example.ProyectoSpring2MVC.controllers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +29,19 @@ public class UserRestController {
 		
 		
 		return dto;
+	}
+	
+	
+	@GetMapping("/list")
+	public List<User> list(){
+		
+		User user = new User("Andres", "Rodri");
+		User user2 = new User("Andres2", "guimenez");
+		User user3 = new User("Andres3", "luacas");
+		
+		List<User> users = Arrays.asList(user,user2,user3);
+		
+		return users;
 	}
 	
 	@GetMapping("/details-map")	
