@@ -4,7 +4,7 @@ public class User {
 
 	private String name;
 	private String lastName;
-
+	private String email;
 	public User(String name, String lastName) {
 		super();
 		this.name = name;
@@ -27,4 +27,13 @@ public class User {
 		this.lastName = lastName;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
 }
