@@ -8,12 +8,12 @@
 
 <body>
 	<h1 th:text="${title}"></h1>
-	<div th:if="${users.size() == 0}">No tiene elementos el usuario</div>
-	<table>
+	<div th:if="${users.isEmpty()}">No tiene elementos el usuario</div>
+	<table  th:if="${not users.isEmpty()}">
 		<thead>
 			<tr>
 				<th>name</th>
-				<th>lastname</th>
+				<th>lastName</th>
 				<th>email</th>
 			</tr>
 		</thead>
@@ -22,7 +22,7 @@
 				<td th:text="${user.name}">
 
 				</td>
-				<td th:text="${user.lastname}">
+				<td th:text="${user.lastName}">
 
 				</td>
 				<td th:text="${user.email}">
